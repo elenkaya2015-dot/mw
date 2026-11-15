@@ -5,8 +5,9 @@
   window.addEventListener("load", () => {
     const ruffle = window.RufflePlayer.newest();
     const player = ruffle.createPlayer();
+    player.style.width = "400px";
+    player.style.height = "200px";
     document.getElementById("player").appendChild(player);
     player.load("qchanger_01.swf");
   });
 </script>
-
