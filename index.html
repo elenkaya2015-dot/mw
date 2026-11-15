@@ -1,3 +1,12 @@
+<div id="player"></div>
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-<embed src="qchanger_01.swf" width="300" height="150">
+<script>
+  window.RufflePlayer = window.RufflePlayer || {};
+  window.addEventListener("load", () => {
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    document.getElementById("player").appendChild(player);
+    player.load("qchanger_01.swf");
+  });
+</script>
 
